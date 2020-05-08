@@ -66,6 +66,7 @@ resource "aws_security_group" "allow_tls" {
   }
 }
 
+#output useful info
 output "db_ip" {
   value = "${aws_instance.db.private_ip}"
 }
