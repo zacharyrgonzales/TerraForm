@@ -4,7 +4,7 @@ resource "aws_instance" "db" {
     instance_type = "t2.micro"
 
     tags = {
-      name = "DB"
+      Name = "DB"
     }
 }
 
@@ -16,7 +16,7 @@ resource "aws_instance" "web" {
     security_groups = ["${aws_security_group.allow_tls.name}"]
 
     tags = {
-      name = "Web"
+      Name = "Web"
     }
 }
 #create elastic ip and assign to web server
