@@ -1,11 +1,13 @@
+#define variables
 variable "iamname" {
   type = "string"
 }
-
+#create iam user once name is passed variable is passed in
 resource "aws_iam_user" "newuser" {
     name = "${var.iamname}"
 }
 
+#create iam policy
 resource "aws_iam_policy" "customiampolicy" {
     name = "customiampolicy"
     policy = <<EOF

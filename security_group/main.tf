@@ -1,3 +1,4 @@
+#create ec2 instance using ubuntu xenial image and apply firewall rules
 resource "aws_instance" "webserver_ec2_example" {
     ami = "ami-03e33c1cefd1d3d74"
     instance_type = "t2.micro"
@@ -9,6 +10,7 @@ resource "aws_instance" "webserver_ec2_example" {
     }
 }
 
+#create security group for firewall
 resource "aws_security_group" "web_dmz_firewall_tf" {
     name = "allow https"
     ingress {

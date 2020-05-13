@@ -1,3 +1,4 @@
+#define variables
 variable "vpcname" {
   type    = "string"
   default = "VPCTerraform"
@@ -21,6 +22,7 @@ variable "myboolean" {
   default = true
 }
 
+#create virtual private cloud
 resource "aws_vpc" "myvpc" {
   cidr_block = "192.168.0.0/24"
 
@@ -30,6 +32,7 @@ resource "aws_vpc" "myvpc" {
   }
 }
 
+#output vpc id
 output "VPCID" {
   value = "${aws_vpc.myvpc.id}"
 }
