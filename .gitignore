@@ -3,3 +3,4 @@ terraform.tfstate.backup
 */.terraform/*
 .terraform/*
 */.terraform.tfstate.lock.info
+terraform_0.11.14_linux_amd64.zip
