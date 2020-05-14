@@ -16,9 +16,10 @@ resource "aws_db_instance" "moduleRdsdb" {
   password             = "acloudguru"
   parameter_group_name = "default.mysql5.7"
   #seperate security group for rds resource
-  vpc_security_group_ids = ["sg-06af0c0cc80a54d19"]
+  vpc_security_group_ids = ["${aws_security_group.RDSSG.id}"]
+  snapshot_identifier = "terraform-20200514204330701000000001-final-snapshot"
+  skip_final_snapshot = true
 }
-
 #output private ip
 output "db_name" {
   value = "${aws_db_instance.moduleRdsdb.id}"
