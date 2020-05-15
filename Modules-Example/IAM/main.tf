@@ -2,15 +2,17 @@
 variable "iamname" {
   type = "string"
 }
+
 #create iam user once name is passed variable is passed in
 resource "aws_iam_user" "newuser" {
-    name = "${var.iamname}"
+  name = "${var.iamname}"
 }
 
 #create iam policy
 resource "aws_iam_policy" "customiampolicy" {
-    name = "customiampolicy"
-    policy = <<EOF
+  name = "customiampolicy"
+
+  policy = <<EOF
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -34,8 +36,7 @@ resource "aws_iam_policy" "customiampolicy" {
 }
 
 resource "aws_iam_policy_attachment" "policybind" {
-  name = "attachment"
-  users = ["${aws_iam_user.newuser.name}"]
+  name       = "attachment"
+  users      = ["${aws_iam_user.newuser.name}"]
   policy_arn = "${aws_iam_policy.customiampolicy.arn}"
 }
-

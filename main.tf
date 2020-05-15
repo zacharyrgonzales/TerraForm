@@ -27,7 +27,7 @@ resource "aws_vpc" "myvpc" {
   cidr_block = "192.168.0.0/24"
 
   tags = {
-    Name = "${var.vpcname}"
+    Name        = "${var.vpcname}"
     Description = "${var.mylist[1]}"
   }
 }
@@ -36,4 +36,3 @@ resource "aws_vpc" "myvpc" {
 output "VPCID" {
   value = "${aws_vpc.myvpc.id}"
 }
-

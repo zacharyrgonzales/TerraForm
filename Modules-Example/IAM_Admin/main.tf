@@ -1,5 +1,5 @@
 variable "iamname" {
-    type = "string"
+  type = "string"
 }
 
 resource "aws_iam_user" "lb" {
@@ -27,8 +27,3 @@ resource "aws_iam_user_policy" "lb_ro" {
 }
   EOF
 }
-
-
-
-
-

@@ -1,24 +1,25 @@
 #create db server
 resource "aws_instance" "db" {
-    ami = "ami-0323c3dd2da7fb37d"
-    instance_type = "t2.micro"
+  ami           = "ami-0323c3dd2da7fb37d"
+  instance_type = "t2.micro"
 
-    tags = {
-      Name = "DB"
-    }
+  tags = {
+    Name = "DB"
+  }
 }
 
 #create bootstrapped web server
 resource "aws_instance" "web" {
-    ami = "ami-0323c3dd2da7fb37d"
-    instance_type = "t2.micro"
-    user_data = "${file("server-script.sh")}"
-    security_groups = ["${aws_security_group.allow_tls.name}"]
+  ami             = "ami-0323c3dd2da7fb37d"
+  instance_type   = "t2.micro"
+  user_data       = "${file("server-script.sh")}"
+  security_groups = ["${aws_security_group.allow_tls.name}"]
 
-    tags = {
-      Name = "Web"
-    }
+  tags = {
+    Name = "Web"
+  }
 }
+
 #create elastic ip and assign to web server
 resource "aws_eip" "lb" {
   instance = "${aws_instance.web.id}"
@@ -29,7 +30,7 @@ resource "aws_security_group" "allow_tls" {
   name        = "allow_tls"
   description = "Allow TLS inbound traffic"
 
-    ingress {
+  ingress {
     description = "HTTP"
     from_port   = 80
     to_port     = 80

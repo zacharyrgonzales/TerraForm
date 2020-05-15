@@ -17,7 +17,7 @@ resource "aws_security_group" "allow_http_https" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-    ingress {
+  ingress {
     description = "https"
     from_port   = 80
     to_port     = 80
@@ -36,5 +36,4 @@ resource "aws_security_group" "allow_http_https" {
   tags = {
     Name = "allow_http_https"
   }
-  
 }
