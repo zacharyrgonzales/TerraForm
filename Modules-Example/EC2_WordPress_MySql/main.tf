@@ -19,10 +19,10 @@ resource "aws_db_instance" "rdsdb" {
   allocated_storage   = 20
   skip_final_snapshot = true
 
-  #This takes some time (e.g 10m)
-  multi_az = true
+  #This takes some time if true is enabled (e.g 10m+)
+  multi_az = false
 
-  #need to write read replica code
+  #Missing code to create read replica
 }
 
 #Create E2 t2.micro using amazon linux image after RDS instance is created
