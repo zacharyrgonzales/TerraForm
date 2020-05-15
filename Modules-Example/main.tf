@@ -1,4 +1,4 @@
-module "CreateWordPressServers" {
-  source          = "./EC2_WordPress_MySql"
-  WordPressDBName = "WordPressSite"
+module "RDSDBName" {
+  source    = "./RDS_MySQL"
+  RDSDBName = "RDSDB01"
 }
