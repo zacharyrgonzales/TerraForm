@@ -1,4 +1,4 @@
-# Terraform Scripts
+# Terraform Usuage
 Terraform is a tool that simplifies the underlying complexity for building, changing, and versioning infrastructure. 
 
 ## Getting Started
