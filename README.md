@@ -1,5 +1,5 @@
 # Terraform Scripts
-Terraform is a tool that simplifies the underlying complexity for building, changing, and versioning infrastructure. I started using Terraform while studying for AWS Solutions Architect exam I found it helpful to do apply a structured learning pattern that consisted of watching, trying, and educating others to help solidify my assumptions around Cloud/DevOps tools and culture. As a result it helped me become a better technologist by not only learning the tools and culture but by also giving back to the community by explaining technology in layman's terms. Therefore I hope these Terraform scripts provide value. If you have any questions please reach me on Linked in at https://www.linkedin.com/in/zrg/.
+Terraform is a tool that simplifies the underlying complexity for building, changing, and versioning infrastructure. 
 
 ## Getting Started
 Create an AWS account, go to console management then IAM, create a new user account with administrator privilages and save the AWS Access Key ID and Secret Access Key for later use.
@@ -79,13 +79,15 @@ Default region name [us-east-1]:
 Default output format [None]: 
 ```
 
-### Initialize Terraform
+### Terraform Init
 
-Change directory to the Modules-Example folder
+the ```terraform init``` command performs several different initialization steps in order to prepare a working directory for use. More details in the [link provided](https://www.terraform.io/docs/commands/init.html#usage), but in most cases it is not necessary to worry about these individual steps.
+
+Change directory to the Modules-Example folder:
 ```
 cd Modules-Example
 ```
-Initialize terraform (initialzes modules and provider plugs)
+Initialize terraform (initialzes modules and provider plugs):
 ```
 terraform init
 ```
@@ -93,19 +95,25 @@ You should see:
 ```
 Terraform has been successfully initialized!
 ```
-This command performs several different initialization steps in order to prepare a working directory for use. More details in the link provided, but in most cases it is not necessary to worry about these individual steps. [Terraform init](https://www.terraform.io/docs/commands/init.html#usage)
 
-### Apply Terraform
+### Terraform Plan
 
-Create the modules that are already present in the main.tf file at the root of the Terraform repository.
+The ```terraform plan``` command is used to create an execution plan. Terraform performs a refresh, unless explicitly disabled, and then determines what actions are necessary to achieve the desired state specified in the configuration files.
 
+Apply terraform:
 ```
 terraform apply
 ```
+Then type in ```yes``` and select enter.
 
-## Deployment
+You can also use the following to skip approval:
+```
+terraform apply -auto-approve
+```
 
-Add additional notes about how to deploy this on a live system
+## Terraform Destroy
+
+The ```terraform destroy``` command is used to destroy the Terraform-managed infrastructure.
 
 ## Built With
 
@@ -123,9 +131,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Zachary Gonzales** - *Writer/Engineer* - [Connect on LinkedIn](https://www.linkedin.com/in/zrg/)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the [kanban board](https://github.com/zacharyrgonzales/TerraForm/projects/1)
 
 ## License
 
@@ -133,6 +141,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* I started using Terraform while studying for AWS Solutions Architect exam I found it helpful to do apply a structured learning pattern that consisted of watching, trying, and educating others to help solidify my assumptions around Cloud/DevOps tools and culture. As a result it helped me become a better technologist by not only learning the tools and culture but by also giving back to the community by explaining technology in layman's terms. Therefore I hope these Terraform scripts provide value. If you have any questions please reach me on Linked in at https://www.linkedin.com/in/zrg/.
+
+
+## Resources
+* [Terraform Commands (CLI)](https://www.terraform.io/docs/commands/index.html)
+* [Terraform Multi-Region Deployment using Modules](https://medium.com/johnveldboom/terraform-multi-region-deployment-using-modules-4f94d7833b52)
+* [GET THE LATEST AWS AMI IDS WITH TERRAFORM](https://letslearndevops.com/2018/08/23/terraform-get-latest-centos-ami/)
