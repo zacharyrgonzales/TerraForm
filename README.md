@@ -95,12 +95,12 @@ Terraform has been successfully initialized!
 ```
 This command performs several different initialization steps in order to prepare a working directory for use. More details in the link provided, but in most cases it is not necessary to worry about these individual steps. [Terraform init](https://www.terraform.io/docs/commands/init.html#usage)
 
-### And coding style tests
+### Apply Terraform
 
-Explain what these tests test and why
+Create the modules that are already present in the main.tf file at the root of the Terraform repository.
 
 ```
-Give an example
+terraform apply
 ```
 
 ## Deployment
