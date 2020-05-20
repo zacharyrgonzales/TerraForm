@@ -40,9 +40,10 @@ data "aws_ami" "latest_ami" {
 
 #create ec2 instances
 resource "aws_instance" "EC2_Example" {
-  ami           = data.aws_ami.latest_ami.id
-  instance_type = "t2.micro"
-  count         = length(var.servers)
+  ami                    = data.aws_ami.latest_ami.id
+  instance_type          = "t2.micro"
+  count                  = length(var.servers)
+  vpc_security_group_ids = [aws_security_group.allow_tls.id]
 
   #Install apache and dependencies
   user_data = <<-EOT
@@ -96,6 +97,6 @@ resource "aws_security_group" "allow_tls" {
 
 #output private ips
 output "expected" {
-  value = [for i in aws_instance.EC2_Example[*].public_ip : "IP Addr: ${i}"]
+  value = [for i in aws_instance.EC2_Example[*] : "IP Addr: ${i.public_ip}, ${i.id}"]
 }
 
