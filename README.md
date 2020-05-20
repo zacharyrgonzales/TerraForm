@@ -1,5 +1,14 @@
-<img src="./tflogo.png" alt="Terraform logo"
-	title="Terraform logo" width="112" height="112" />
+<meta name="title" property="og:title" content="Terraform Usuage">
+
+<meta property="og:type" content="Article">
+
+<meta name="image" property="og:image" content="//https://github.com/zacharyrgonzales/TerraForm/blob/master/tflogo.png?raw=true">
+
+<meta name="description" property="og:description" content="Terraform guide">
+
+<meta name="author" content="Zachary R Gonzales">
+
+<img src="tflogo.png" width="112" height="112" />
 
 # Terraform Usuage
 Terraform is a tool that simplifies the underlying complexity for building, changing, and versioning infrastructure. 
@@ -27,7 +36,9 @@ To clone the project on your local machine please run the following in a termina
 git clone https://github.com/zacharyrgonzales/TerraForm.git
 ```
 
-See deployment for notes on how to deploy the project on a live system.
+### Terraform Diagram
+
+<img src="/images/tf-diagram.png" width="412" height="912" />
 
 ## Prerequisites
 
@@ -157,10 +168,14 @@ Terraform must store state about your managed infrastructure and configuration. 
 
 Terraform state is held in [*terraform.tfstate*]() which is the current state of terraform. *terraform.tfstate.backup* is the previous state. If you look at the [*terraform.tfstate.backup*]() file you will see all the metadata for the EC2 machines that were provisioned. In *terraform.tfstate* after destroying the managed infrastructure the dependencies are removed.
 
+### Terraform 0.12
+
+...
 
 ## Built With
 
 * [Terraform 11.14](http://www.dropwizard.io/1.0.2/docs/) - Use Infrastructure as Code to provision and manage any cloud, infrastructure, or service
+* [Terraform Switch](https://warrensbox.github.io/terraform-switcher/) - A command line tool to switch between different versions of terraform (with homebrew and more)
 * [AWS CLI](https://maven.apache.org/) - Unified tool to manage your AWS Services
 * [VSCode](https://rometools.github.io/rome/) - Source-code editor developed by Microsoft 
 * [Git](https://rometools.github.io/rome/) - Free and open source distributed version control system.
