@@ -1,5 +1,4 @@
-<img src="./tflogo.png" alt="Terraform logo"
-	title="Terraform logo" width="112" height="112" />
+<img src="{{ resize_image(path=thumb, width=160, height=160, quality=100) | replace(from='./tflogo.png', to='') }}" />
 
 # Terraform Usuage
 Terraform is a tool that simplifies the underlying complexity for building, changing, and versioning infrastructure. 
