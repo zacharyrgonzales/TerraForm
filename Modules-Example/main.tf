@@ -3,7 +3,7 @@ module "us-east-1" {
   servers = ["web1"]
 
   providers = {
-    aws = "aws"
+    aws = aws
   }
 }
 
@@ -12,7 +12,7 @@ module "us-west-1" {
   servers = ["web2"]
 
   providers = {
-    aws = "aws.us-west-1"
+    aws = aws.us-west-1
   }
 }
 
@@ -21,6 +21,7 @@ module "ca-central-1" {
   servers = ["web3"]
 
   providers = {
-    aws = "aws.ca-central-1"
+    aws = aws.ca-central-1
   }
 }
+
