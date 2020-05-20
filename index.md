@@ -36,7 +36,9 @@ To clone the project on your local machine please run the following in a termina
 git clone https://github.com/zacharyrgonzales/TerraForm.git
 ```
 
-See deployment for notes on how to deploy the project on a live system.
+### Terraform Diagram
+
+<img src="/images/tf-diagram.png" width="412" height="912" />
 
 ## Prerequisites
 
