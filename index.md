@@ -8,7 +8,7 @@
 
 <meta name="author" content="Zachary R Gonzales">
 
-<img src="/images/tflogo.png" width="112" height="112" />
+<img src="https://github.com/zacharyrgonzales/TerraForm/blob/development/images/tflogo.png?raw=true" width="112" height="112" />
 
 # Terraform Usuage
 Terraform is a tool that simplifies the underlying complexity for building, changing, and versioning infrastructure. 
@@ -38,7 +38,7 @@ git clone https://github.com/zacharyrgonzales/TerraForm.git
 
 ### Terraform Diagram
 
-<img src="/images/tf-diagram.png" width="412" height="524" />
+<img src="https://github.com/zacharyrgonzales/TerraForm/blob/development/images/tf-diagram.png?raw=true" width="412" height="524" />
 
 ## Prerequisites
 
