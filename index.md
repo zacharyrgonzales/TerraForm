@@ -38,7 +38,7 @@ git clone https://github.com/zacharyrgonzales/TerraForm.git
 
 ### Terraform Diagram
 
-<img src="/images/tf-diagram.png" width="412" height="912" />
+<img src="/images/tf-diagram.png" width="412" height="524" />
 
 ## Prerequisites
 
