@@ -1,5 +1,5 @@
 <meta property='og:title' content="Terraform Scripts"/>
-<meta property='og:image' content="tflogo.png"/>
+<meta property='og:image' content="/tflogo.png"/>
 <meta property='og:description' content="Learn Terraform!"/>
 <meta property='og:url' content="https://zacharyrgonzales.github.io/TerraForm/" />
 <meta property='og:author' content="Zachary R Gonzales" />
