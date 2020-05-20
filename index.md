@@ -2,7 +2,7 @@
 
 <meta property="og:type" content="Article">
 
-<meta name="image" property="og:image" content="https://www.terraform.io/assets/images/og-image-8b3e4f7d.png">
+<meta name="image" property="og:image" content="tflogo.png">
 
 <meta name="description" property="og:description" content="Terraform guide">
 
