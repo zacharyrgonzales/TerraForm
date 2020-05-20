@@ -1,3 +1,6 @@
+<img src="./tflogo.png" alt="Terraform logo"
+	title="Terraform logo" width="112" height="112" />
+
 # Terraform Usuage
 Terraform is a tool that simplifies the underlying complexity for building, changing, and versioning infrastructure. 
 
