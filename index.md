@@ -44,8 +44,8 @@ git clone https://github.com/zacharyrgonzales/TerraForm.git
 
 What things you need to install the software and how to install them
 ```
-Terraform 11.14
-AWS CLI
+Terraform v0.12.25
++ provider.aws v2.62.0
 VSCode
 Git
 ```
@@ -54,7 +54,7 @@ Git
 
 Install Terraform on Ubuntu, OS X, or Windows and add to path:
 ```
-https://releases.hashicorp.com/terraform/0.11.14/
+https://releases.hashicorp.com/terraform/0.12.25/
 ```
 Verify that Terraform accepts commands:
 ```
@@ -62,7 +62,7 @@ terraform --version
 ```
 You should the terraform version number as a result if installed correctly and added to path:
 ```
-Terraform v0.11.14
+Terraform v0.12.25
 ```
 ### Installing AWS CLI
 
