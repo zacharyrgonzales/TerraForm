@@ -1,8 +1,12 @@
-<meta property='og:title' content="Terraform Scripts"/>
-<meta property='og:image' content="/tflogo.png"/>
-<meta property='og:description' content="Learn Terraform!"/>
-<meta property='og:url' content="https://zacharyrgonzales.github.io/TerraForm/" />
-<meta property='og:author' content="Zachary R Gonzales" />
+<meta name="title" property="og:title" content="Terraform Usuage">
+
+<meta property="og:type" content="Article">
+
+<meta name="image" property="og:image" content="/tflogo.png">
+
+<meta name="description" property="og:description" content="Terraform guide">
+
+<meta name="author" content="Zachary R Gonzales">
 
 # Terraform Usuage - t
 Terraform is a tool that simplifies the underlying complexity for building, changing, and versioning infrastructure. 
