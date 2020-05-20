@@ -168,10 +168,14 @@ Terraform must store state about your managed infrastructure and configuration. 
 
 Terraform state is held in [*terraform.tfstate*]() which is the current state of terraform. *terraform.tfstate.backup* is the previous state. If you look at the [*terraform.tfstate.backup*]() file you will see all the metadata for the EC2 machines that were provisioned. In *terraform.tfstate* after destroying the managed infrastructure the dependencies are removed.
 
+### Terraform 0.12
+
+...
 
 ## Built With
 
 * [Terraform 11.14](http://www.dropwizard.io/1.0.2/docs/) - Use Infrastructure as Code to provision and manage any cloud, infrastructure, or service
+* [Terraform Switch](https://warrensbox.github.io/terraform-switcher/) - A command line tool to switch between different versions of terraform (with homebrew and more)
 * [AWS CLI](https://maven.apache.org/) - Unified tool to manage your AWS Services
 * [VSCode](https://rometools.github.io/rome/) - Source-code editor developed by Microsoft 
 * [Git](https://rometools.github.io/rome/) - Free and open source distributed version control system.
