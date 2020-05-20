@@ -8,6 +8,8 @@
 
 <meta name="author" content="Zachary R Gonzales">
 
+<img src="tflogo.png" width="112" height="112" />
+
 # Terraform Usuage
 Terraform is a tool that simplifies the underlying complexity for building, changing, and versioning infrastructure. 
 
