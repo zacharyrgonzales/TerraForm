@@ -1,7 +1,25 @@
+#Variable for default vpc usage - terraform does not create this, but instead "adopts" it into management
+resource "aws_default_vpc" "default" {
+  tags = {
+    Name = "Default VPC"
+  }
+}
 #inputs are passed into the variables which triggers the resourcers to start building
 variable "servers" {
   type = list(string)
 }
+
+#dynamic block start
+variable "ingress_rules" {
+  type    = list(number)
+  default = [80, 443]
+}
+
+variable "egress_rules" {
+  type    = list(number)
+  default = [80, 443]
+}
+
 
 #Get latest amazon ecs ami
 data "aws_ami" "latest_ami" {
@@ -42,8 +60,42 @@ resource "aws_instance" "EC2_Example" {
   }
 }
 
+resource "aws_security_group" "allow_tls" {
+  name        = "allow_tls"
+  description = "Allow TLS inbound traffic"
+  vpc_id      = aws_default_vpc.default.id
+
+  dynamic "ingress" {
+    iterator = port
+    for_each = var.ingress_rules
+    content {
+      description = "TLS from VPC"
+      from_port   = port.value
+      to_port     = port.value
+      protocol    = "tcp"
+      cidr_blocks = ["0.0.0.0/0"]
+    }
+  }
+
+  dynamic "egress" {
+    iterator = port
+    for_each = var.egress_rules
+    content {
+      description = "TLS from VPC"
+      from_port   = port.value
+      to_port     = port.value
+      protocol    = "tcp"
+      cidr_blocks = ["0.0.0.0/0"]
+    }
+  }
+
+  tags = {
+    Name = "allow_tls"
+  }
+}
+
 #output private ips
 output "expected" {
-  value = [for i in aws_instance.EC2_Example[*].private_ip : "IP Addr: ${i}"]
+  value = [for i in aws_instance.EC2_Example[*].public_ip : "IP Addr: ${i}"]
 }
 
