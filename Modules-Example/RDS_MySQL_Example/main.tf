@@ -6,7 +6,7 @@ variable "RDSDBName" {
 #Create RDS MySQL Instance
 resource "aws_db_instance" "rdsdb" {
   #name of database - alpha numeric and lowercase and dashes are allowed
-  name = "${var.RDSDBName}" #! <-- Database Name
+  name = var.RDSDBName #! <-- Database Name
 
   #identifer of the rds instance - lowercase and dashes are allowed
   identifier          = "rdsinstance1"

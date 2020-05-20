@@ -25,3 +25,14 @@ module "ca-central-1" {
   }
 }
 
+output "us_east_ip" {
+  value = [module.us-east-1.expected]
+}
+output "us_west_ip" {
+  value = [module.us-west-1.expected]
+}
+output "ca_central_ip" {
+  value = [module.ca-central-1.expected]
+}
+
+
