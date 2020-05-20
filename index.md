@@ -1,4 +1,7 @@
-<img src="{{ resize_image(path=thumb, width=160, height=160, quality=100) | replace(from='./tflogo.png', to='') }}" />
+<meta property='og:title' content="Terraform Scripts"/>
+<meta property='og:image' content="./tflogo.png"/>
+<meta property='og:description' content="Learn Terraform!"/>
+<meta property='og:url' content="https://zacharyrgonzales.github.io/TerraForm/" />
 
 # Terraform Usuage
 Terraform is a tool that simplifies the underlying complexity for building, changing, and versioning infrastructure. 
